@@ -1,0 +1,77 @@
+<div class="edit-container">
+    <!-- Button trigger modal -->
+    <button
+        type="button"
+        class="btn btn-primary edit-btn"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+    >
+        Edit
+    </button>
+
+    <!-- Modal -->
+    <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="/update" method="post">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Edit Your To-do
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="modal-title" class="form-label"
+                                >Title</label
+                            >
+                            <input
+                                type="text"
+                                class="form-control"
+                                name="title"
+                                id="modal-title"
+                                placeholder="Enter your task"
+                            />
+                            <input type="hidden" name="id" id="modal-todo-id" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="modal-desc" class="form-label"
+                                >Description</label
+                            >
+                            <input
+                                type="text"
+                                class="form-control"
+                                name="desc"
+                                id="modal-desc"
+                                placeholder="Enter description for task"
+                            />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                        >
+                            Close
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            Save changes
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
